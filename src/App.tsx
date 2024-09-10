@@ -1,7 +1,7 @@
 import { Link } from "react-router-dom";
 import "./App.css";
-import { FaInstagram, FaGithub, FaGlobe, FaLinkedin } from "react-icons/fa";
-import { IoMdDocument, IoIosSchool } from "react-icons/io";
+import { FaInstagram, FaGithub, FaGlobe, FaLinkedin, FaTiktok } from "react-icons/fa";
+import { IoIosSchool } from "react-icons/io";
 import { MdMessage } from "react-icons/md";
 import { useEffect, useState } from "react";
 
@@ -38,11 +38,16 @@ function App() {
       icon: <FaLinkedin />,
       action: "https://www.linkedin.com/in/kevien-ollyvie-jolanda-057268194/",
     },
+    {
+      id: 4,
+      icon: <FaTiktok />,
+      action: "https://www.tiktok.com/@xenoolyzano",
+    },
   ];
 
   return (
     <main className="wrapper relative w-full bg-slate-300 dark:bg-slate-700 h-screen bg-white shadow-lg  flex justify-center items-center transtition-all duration-300 ease-in-out">
-      <section className="card-wrapper w-[350px] h-[500px] bg-white dark:bg-slate-900 border-2  shadow-md dark:shadow-none shadow-slate-500 rounded-lg py-4 relative ">
+      <section className="card-wrapper w-[350px] h-[500px] bg-white dark:bg-slate-900 border-2  dark:border-none shadow-md dark:shadow-none shadow-slate-500 rounded-lg py-4 relative ">
         <div className="card-header w-fuil h-[250px]">
           <figure>
             <img src="image/foto-kepin.png" alt="kepin.png" className="w-[100px] h-[100px] mt-2 mx-auto rounded-full border-2 shadow-md " />
@@ -67,25 +72,12 @@ function App() {
                   </Link>
                 </li>
               ))}
-
-              <li
-                className="w-[40px] h-[40px] bg-white dark:bg-slate-700 text-black dark:text-white hover:bg-slate-900 dark:hover:bg-slate-600 hover:text-white shadow-md rounded-full flex justify-center items-center
-                  transition-all duration-300
-                "
-              ></li>
             </ul>
           </article>
         </div>
 
         <div className="card-body w-full h-[180px] flex flex-col justify-center gap-5 px-10 font-roboto ">
-          <Link to={""} target="_blank" className="h-10 bg-slate-900 dark:bg-white text-white dark:text-slate-900 rounded-md relative">
-            <div className="absolute top-2 left-3 text-2xl">
-              <IoMdDocument />
-            </div>
-            <button className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2">Download CV</button>
-          </Link>
-
-          <Link to={""} className="h-10 bg-slate-900 dark:bg-white text-white dark:text-slate-900 rounded-md relative" onClick={() => {}}>
+          <Link to={"https://kevien-portfolio.com/"} className="h-10 bg-slate-900 dark:bg-white text-white dark:text-slate-900 rounded-md relative" onClick={() => {}}>
             <div className="absolute top-2 left-3 text-2xl">
               <FaGlobe />
             </div>
